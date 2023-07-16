@@ -6,7 +6,6 @@ import {Theme, DayState, MarkingTypes, DateData} from '../../../types';
 import styleConstructor from './style';
 import Marking, {MarkingProps} from '../marking';
 
-
 export interface BasicDayProps extends ViewProps {
   state?: DayState;
   /** The marking object */
@@ -130,6 +129,7 @@ const BasicDay = (props: BasicDayProps) => {
     onLongPress?.(dateData);
   }, [onLongPress, date]);
 
+  // TODO: make change here
   const renderMarking = () => {
     const {marked, dotColor, dots, periods} = _marking;
 
